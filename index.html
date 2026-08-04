@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- ============================================
+         Student Portfolio Website
+         Built with HTML5 & CSS3 only — no JavaScript
+         ============================================ -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Personal portfolio of Saksham — a passionate Computer Science student showcasing skills, projects, and achievements.">
+    <meta name="keywords" content="portfolio, student, developer, web development, projects">
+    <meta name="author" content="Saksham">
+
+    <title>Saksham | Student Portfolio</title>
+
+    <!-- Google Fonts — Inter for headings, Outfit for body -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ===================== NAVIGATION BAR ===================== -->
+    <header class="navbar" id="navbar">
+        <nav class="nav-container">
+            <!-- Brand / Logo -->
+            <a href="#hero" class="nav-brand">
+                <span class="brand-icon">S</span>
+                <span class="brand-text">aksham</span>
+            </a>
+
+            <!-- Navigation Links (CSS-only hamburger toggle) -->
+            <input type="checkbox" id="nav-toggle" class="nav-toggle-checkbox" aria-label="Toggle navigation">
+            <label for="nav-toggle" class="nav-toggle-label" aria-label="Open menu">
+                <span class="hamburger"></span>
+            </label>
+
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#certifications">Certifications</a></li>
+                <li><a href="#contact" class="nav-cta">Contact Me</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ===================== HERO SECTION ===================== -->
+    <section class="hero" id="hero">
+        <!-- Animated background blobs (pure CSS) -->
+        <div class="hero-blob hero-blob--1"></div>
+        <div class="hero-blob hero-blob--2"></div>
+        <div class="hero-blob hero-blob--3"></div>
+
+        <div class="hero-content">
+            <!-- Profile Image with animated ring -->
+            <div class="hero-image-wrapper">
+                <div class="hero-image-ring"></div>
+                <img src="assets/profile.png" alt="Saksham — Computer Science Student" class="hero-image" loading="eager">
+            </div>
+
+            <!-- Hero Text Content -->
+            <div class="hero-text">
+                <p class="hero-greeting">Hello, I'm</p>
+                <h1 class="hero-name">Saksham</h1>
+                <p class="hero-tagline">Computer Science Student &amp; Aspiring Developer</p>
+                <p class="hero-description">
+                    I craft clean, accessible, and performant digital experiences.
+                    Passionate about turning ideas into reality through code.
+                </p>
+
+                <!-- CTA Buttons -->
+                <div class="hero-cta-group">
+                    <a href="#projects" class="btn btn--primary">View My Work</a>
+                    <a href="#contact" class="btn btn--outline">Get In Touch</a>
+                </div>
+
+                <!-- Social Links -->
+                <div class="hero-socials">
+                    <a href="https://github.com/" class="social-link" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
+                        <!-- GitHub SVG Icon -->
+                        <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M12 .5C5.37.5 0 5.78 0 12.292c0 5.211 3.438 9.63 8.205 11.188.6.111.82-.254.82-.567 0-.28-.01-1.022-.015-2.005-3.338.711-4.042-1.582-4.042-1.582-.546-1.361-1.333-1.723-1.333-1.723-1.089-.731.083-.716.083-.716 1.205.082 1.838 1.215 1.838 1.215 1.07 1.802 2.807 1.281 3.492.979.108-.763.418-1.281.762-1.576-2.665-.297-5.466-1.309-5.466-5.827 0-1.287.465-2.339 1.228-3.163-.122-.298-.532-1.497.117-3.12 0 0 1.001-.314 3.28 1.209A11.504 11.504 0 0 1 12 6.844c1.02.005 2.047.136 3.006.398 2.277-1.523 3.276-1.209 3.276-1.209.65 1.623.24 2.822.118 3.12.765.824 1.226 1.876 1.226 3.163 0 4.53-2.805 5.527-5.475 5.817.43.366.814 1.084.814 2.184 0 1.576-.014 2.846-.014 3.232 0 .316.216.683.825.567C20.565 21.917 24 17.5 24 12.292 24 5.78 18.627.5 12 .5z"/></svg>
+                    </a>
+                    <a href="https://linkedin.com/" class="social-link" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+                        <!-- LinkedIn SVG Icon -->
+                        <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                    </a>
+                    <a href="mailto:saksham@example.com" class="social-link" aria-label="Email">
+                        <!-- Email SVG Icon -->
+                        <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll-down indicator -->
+        <a href="#about" class="scroll-indicator" aria-label="Scroll down">
+            <span class="scroll-arrow"></span>
+        </a>
+    </section>
+
+    <!-- ===================== ABOUT ME ===================== -->
+    <section class="section about" id="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <p class="section-subtitle">Get to know me a little better</p>
+
+            <div class="about-grid">
+                <!-- About Text Card -->
+                <div class="about-card about-card--text">
+                    <h3 class="about-heading">Who I Am</h3>
+                    <p>
+                        I'm a dedicated Computer Science student with a deep passion for software development and
+                        creative problem-solving. Currently pursuing my degree, I spend my time building projects
+                        that bridge the gap between elegant design and robust functionality.
+                    </p>
+                    <p>
+                        When I'm not coding, you'll find me exploring new technologies, contributing to open-source
+                        communities, or sharpening my skills through competitive programming. I believe in
+                        continuous learning and writing code that makes a difference.
+                    </p>
+                </div>
+
+                <!-- Quick Facts Cards -->
+                <div class="about-facts">
+                    <div class="fact-card">
+                        <span class="fact-icon">🎓</span>
+                        <span class="fact-label">Pursuing</span>
+                        <span class="fact-value">B.Tech in CS</span>
+                    </div>
+                    <div class="fact-card">
+                        <span class="fact-icon">💻</span>
+                        <span class="fact-label">Projects Built</span>
+                        <span class="fact-value">10+</span>
+                    </div>
+                    <div class="fact-card">
+                        <span class="fact-icon">🏆</span>
+                        <span class="fact-label">Certifications</span>
+                        <span class="fact-value">5+</span>
+                    </div>
+                    <div class="fact-card">
+                        <span class="fact-icon">☕</span>
+                        <span class="fact-label">Cups of Coffee</span>
+                        <span class="fact-value">∞</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== SKILLS ===================== -->
+    <section class="section skills" id="skills">
+        <div class="container">
+            <h2 class="section-title">My Skills</h2>
+            <p class="section-subtitle">Technologies &amp; tools I work with</p>
+
+            <div class="skills-grid">
+                <!-- Skill Card 1 -->
+                <div class="skill-card" id="skill-html">
+                    <div class="skill-icon-wrapper" style="--accent: #E34F26;">
+                        <svg viewBox="0 0 24 24" fill="currentColor" width="32" height="32"><path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.565-2.438L1.5 0zm7.031 9.75l-.232-2.718 10.059.003.071-.757.54-6.016.066-.75H4.065l.077.816.823 9.422h8.79l-.35 3.79-1.399.382-1.41-.39-.089-1.005h-2.73l.174 1.965 4.046 1.122 4.07-1.132.549-6.176H8.531z"/></svg>
+                    </div>
+                    <h3 class="skill-name">HTML5</h3>
+                    <div class="skill-bar"><div class="skill-fill" style="--fill: 90%;"></div></div>
+                </div>
+
+                <!-- Skill Card 2 -->
+                <div class="skill-card" id="skill-css">
+                    <div class="skill-icon-wrapper" style="--accent: #1572B6;">
+                        <svg viewBox="0 0 24 24" fill="currentColor" width="32" height="32"><path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.565-2.438L1.5 0zm17.09 4.413L5.41 4.41l.213 2.622 10.125.002-.255 2.716h-6.81l.244 2.576h6.323l-.36 3.775-2.88.784-2.874-.784-.179-2.162h-2.709l.348 4.233 5.418 1.576 5.429-1.576.945-10.78z"/></svg>
+                    </div>
+                    <h3 class="skill-name">CSS3</h3>
+                    <div class="skill-bar"><div class="skill-fill" style="--fill: 85%;"></div></div>
+                </div>
+
+                <!-- Skill Card 3 -->
+                <div class="skill-card" id="skill-js">
+                    <div class="skill-icon-wrapper" style="--accent: #F7DF1E;">
+                        <svg viewBox="0 0 24 24" fill="currentColor" width="32" height="32"><path d="M0 0h24v24H0V0zm22.034 18.276c-.175-1.095-.888-2.015-3.003-2.873-.736-.345-1.554-.585-1.797-1.14-.091-.33-.105-.51-.046-.705.15-.646.915-.84 1.515-.66.39.12.75.42.976.9 1.034-.676 1.034-.676 1.755-1.125-.27-.42-.405-.6-.586-.78-.63-.705-1.469-1.065-2.834-1.034l-.705.089c-.676.165-1.32.525-1.71 1.005-1.14 1.291-.811 3.541.569 4.471 1.365 1.02 3.361 1.244 3.616 2.205.24 1.17-.87 1.545-1.966 1.41-.811-.18-1.26-.586-1.755-1.336l-1.83 1.051c.21.48.45.689.81 1.109 1.74 1.756 6.09 1.666 6.871-1.004.029-.09.24-.705.074-1.65l.046.067zm-8.983-7.245h-2.248c0 1.938-.009 3.864-.009 5.805 0 1.232.063 2.363-.138 2.711-.33.689-1.18.601-1.566.48-.396-.196-.597-.466-.83-.855-.063-.105-.11-.196-.127-.196l-1.825 1.125c.305.63.75 1.172 1.324 1.517.855.51 2.004.675 3.207.405.783-.226 1.458-.691 1.811-1.411.51-.93.402-2.07.397-3.346.012-2.054 0-4.109 0-6.179l.004-.056z"/></svg>
+                    </div>
+                    <h3 class="skill-name">JavaScript</h3>
+                    <div class="skill-bar"><div class="skill-fill" style="--fill: 75%;"></div></div>
+                </div>
+
+                <!-- Skill Card 4 -->
+                <div class="skill-card" id="skill-react">
+                    <div class="skill-icon-wrapper" style="--accent: #61DAFB;">
+                        <svg viewBox="0 0 24 24" fill="currentColor" width="32" height="32"><path d="M14.23 12.004a2.236 2.236 0 0 1-2.235 2.236 2.236 2.236 0 0 1-2.236-2.236 2.236 2.236 0 0 1 2.235-2.236 2.236 2.236 0 0 1 2.236 2.236zm2.648-10.69c-1.346 0-3.107.96-4.888 2.622-1.78-1.653-3.542-2.602-4.887-2.602-.31 0-.592.068-.828.2C4.97 2.17 4.394 4.09 4.923 6.753c-2.4.876-3.923 2.14-3.923 3.252 0 1.114 1.535 2.39 3.95 3.27-.532 2.64.054 4.538 1.36 5.198.238.12.51.18.809.18 1.356 0 3.13-.974 4.916-2.648 1.796 1.69 3.583 2.668 4.95 2.668.3 0 .575-.06.815-.188 1.314-.666 1.9-2.574 1.372-5.208 2.383-.87 3.893-2.138 3.893-3.252 0-1.118-1.527-2.397-3.935-3.278.533-2.636-.046-4.54-1.362-5.2a1.663 1.663 0 0 0-.82-.194zm-.118 1.342c.161 0 .286.03.378.078.59.302.917 1.467.626 3.142a16.35 16.35 0 0 0-.528-.145c-.636-1.55-1.452-2.9-2.394-3.87.754-.562 1.437-.835 1.855-.862l.063-.003.001.66-.001-.66zm-9.52.003c.428.025 1.125.302 1.892.877a16.89 16.89 0 0 0-2.38 3.848 16.62 16.62 0 0 0-2.028.566c-.28-1.662.046-2.818.627-3.114.088-.045.207-.072.36-.076l.137.002-.608-.103zm4.764 3.17c.615.573 1.2 1.227 1.74 1.952a21.95 21.95 0 0 0-3.488 0c.547-.73 1.136-1.388 1.748-1.951zm-3.065 3.03a19.452 19.452 0 0 0-1.19 2.49c-.758-.222-1.43-.488-1.993-.78l-.046-.025c-.452-.243-.832-.503-1.13-.77.32-.29.744-.575 1.254-.838a19.72 19.72 0 0 0 1.122-1.576l1.983 1.5zm6.132 0l1.982-1.5c.393.488.763 1.01 1.107 1.558.52.27.958.565 1.284.86-.3.27-.683.533-1.142.78l-.046.024c-.56.29-1.228.554-1.98.774a19.45 19.45 0 0 0-1.205-2.496zM12 8.1c.74 0 1.477.062 2.196.183a18.59 18.59 0 0 1 1.574 2.836c.323.767.592 1.54.804 2.302a18.79 18.79 0 0 1-.819 2.335 18.52 18.52 0 0 1-1.582 2.84A18.45 18.45 0 0 1 12 18.9a18.43 18.43 0 0 1-2.175-.184 18.52 18.52 0 0 1-1.58-2.84 18.79 18.79 0 0 1-.818-2.334c.213-.764.483-1.538.808-2.306a18.59 18.59 0 0 1 1.579-2.84A18.45 18.45 0 0 1 12 8.1zm-5.546 6.576c.297.824.644 1.64 1.037 2.435-1.236-.296-2.318-.714-3.185-1.22.876-.508 1.97-.93 3.218-1.23l-1.07.015zm11.092 0l-1.07-.015c1.247.3 2.342.722 3.218 1.23-.867.506-1.949.924-3.185 1.22a19.61 19.61 0 0 0 1.037-2.435zM7.685 19.075c-.157 0-.28-.028-.37-.074-.59-.3-.917-1.457-.628-3.118.636.2 1.324.37 2.05.506a16.89 16.89 0 0 0 2.387 3.856c-.76.57-1.45.845-1.875.87l-.064.003-.1-.001-.098-.001.1-.04-.101.041-.001-.001.697-.04h.003zm8.625-.002h.003l.698.04-.1-.04.098.001-.098.001-.064-.003c-.427-.025-1.12-.3-1.884-.877a16.89 16.89 0 0 0 2.38-3.848c.727-.137 1.415-.308 2.052-.51.286 1.676-.042 2.84-.636 3.142-.09.046-.215.074-.375.076l-.074-.001z"/></svg>
+                    </div>
+                    <h3 class="skill-name">React</h3>
+                    <div class="skill-bar"><div class="skill-fill" style="--fill: 70%;"></div></div>
+                </div>
+
+                <!-- Skill Card 5 -->
+                <div class="skill-card" id="skill-python">
+                    <div class="skill-icon-wrapper" style="--accent: #3776AB;">
+                        <svg viewBox="0 0 24 24" fill="currentColor" width="32" height="32"><path d="M14.25.18l.9.2.73.26.59.3.45.32.34.34.25.34.16.33.1.3.04.26.02.2-.01.13V8.5l-.05.63-.13.55-.21.46-.26.38-.3.31-.33.25-.35.19-.35.14-.33.1-.3.07-.26.04-.21.02H8.77l-.69.05-.59.14-.5.22-.41.27-.33.32-.27.35-.2.36-.15.37-.1.35-.07.32-.04.27-.02.21v3.06H3.17l-.21-.03-.28-.07-.32-.12-.35-.18-.36-.26-.36-.36-.35-.46-.32-.59-.28-.73-.21-.88-.14-1.05-.05-1.23.06-1.22.16-1.04.24-.87.32-.71.36-.57.4-.44.42-.33.42-.24.4-.16.36-.1.32-.05.24-.01h.16l.06.01h8.16v-.83H6.18l-.01-2.75-.02-.37.05-.34.11-.31.17-.28.25-.26.31-.23.38-.2.44-.18.51-.15.58-.12.64-.1.71-.06.77-.04.84-.02 1.27.05zm-6.3 1.98l-.23.33-.08.41.08.41.23.34.33.22.41.09.41-.09.33-.22.23-.34.08-.41-.08-.41-.23-.33-.33-.22-.41-.09-.41.09-.33.22zM21.1 6.11l.28.06.32.12.35.18.36.27.36.35.35.47.32.59.28.73.21.89.14 1.04.05 1.23-.06 1.23-.16 1.04-.24.86-.32.71-.36.57-.4.45-.42.33-.42.24-.4.16-.36.09-.32.05-.24.02-.16-.01h-8.22v.82h5.84l.01 2.76.02.36-.05.34-.11.31-.17.29-.25.25-.31.24-.38.2-.44.17-.51.15-.58.13-.64.09-.71.07-.77.04-.84.01-1.27-.04-1.07-.14-.9-.2-.73-.25-.59-.3-.45-.33-.34-.34-.25-.34-.16-.33-.1-.3-.04-.25-.02-.2.01-.13v-5.34l.05-.64.13-.54.21-.46.26-.38.3-.32.33-.24.35-.2.35-.14.33-.1.3-.06.26-.04.21-.02.13-.01h5.84l.69-.05.59-.14.5-.21.41-.28.33-.32.27-.35.2-.36.15-.36.1-.35.07-.32.04-.28.02-.21V6.07h2.09l.14.01.21.03zm-6.47 14.25l-.23.33-.08.41.08.41.23.33.33.23.41.08.41-.08.33-.23.23-.33.08-.41-.08-.41-.23-.33-.33-.23-.41-.08-.41.08-.33.23z"/></svg>
+                    </div>
+                    <h3 class="skill-name">Python</h3>
+                    <div class="skill-bar"><div class="skill-fill" style="--fill: 80%;"></div></div>
+                </div>
+
+                <!-- Skill Card 6 -->
+                <div class="skill-card" id="skill-java">
+                    <div class="skill-icon-wrapper" style="--accent: #ED8B00;">
+                        <svg viewBox="0 0 24 24" fill="currentColor" width="32" height="32"><path d="M8.851 18.56s-.917.534.653.714c1.902.218 2.874.187 4.969-.211 0 0 .552.346 1.321.646-4.699 2.013-10.633-.118-6.943-1.149M8.276 15.933s-1.028.761.542.924c2.032.209 3.636.227 6.413-.308 0 0 .384.389.987.602-5.679 1.661-12.007.13-7.942-1.218M13.116 11.475c1.158 1.333-.304 2.533-.304 2.533s2.939-1.518 1.589-3.418c-1.261-1.772-2.228-2.652 3.007-5.688 0 0-8.216 2.051-4.292 6.573M19.33 20.504s.679.559-.747.991c-2.712.822-11.288 1.069-13.669.033-.856-.373.75-.89 1.254-.998.527-.114.828-.093.828-.093-.953-.671-6.156 1.317-2.643 1.887 9.58 1.553 17.462-.7 14.977-1.82M9.292 13.21s-4.362 1.036-1.544 1.412c1.189.159 3.561.123 5.77-.062 1.806-.152 3.618-.477 3.618-.477s-.637.272-1.098.587c-4.429 1.165-12.986.623-10.522-.569 2.082-1.006 3.776-.891 3.776-.891M17.116 17.584c4.503-2.34 2.421-4.589.968-4.285-.355.074-.515.138-.515.138s.132-.207.385-.297c2.875-1.011 5.086 2.981-.929 4.562 0 0 .07-.062.091-.118M14.401 0s2.494 2.494-2.365 6.33c-3.896 3.077-.889 4.832 0 6.836-2.274-2.053-3.943-3.858-2.824-5.539 1.644-2.469 6.197-3.665 5.189-7.627M9.734 23.924c4.322.277 10.959-.154 11.116-2.198 0 0-.302.775-3.572 1.391-3.688.694-8.239.613-10.937.168 0 0 .553.457 3.393.639"/></svg>
+                    </div>
+                    <h3 class="skill-name">Java</h3>
+                    <div class="skill-bar"><div class="skill-fill" style="--fill: 72%;"></div></div>
+                </div>
+
+                <!-- Skill Card 7 -->
+                <div class="skill-card" id="skill-git">
+                    <div class="skill-icon-wrapper" style="--accent: #F05032;">
+                        <svg viewBox="0 0 24 24" fill="currentColor" width="32" height="32"><path d="M23.546 10.93L13.067.452c-.604-.603-1.582-.603-2.188 0L8.708 2.627l2.76 2.76c.645-.215 1.379-.07 1.889.441.516.515.658 1.258.438 1.9l2.66 2.66c.642-.22 1.386-.077 1.9.437.718.718.718 1.882 0 2.6-.719.72-1.882.72-2.601 0-.543-.54-.673-1.336-.394-2l-2.48-2.48v6.53c.175.087.34.2.485.344.718.72.718 1.88 0 2.6-.719.72-1.882.72-2.6 0-.719-.72-.719-1.88 0-2.6.178-.178.385-.315.61-.41v-6.6c-.225-.094-.43-.23-.61-.41-.545-.545-.675-1.345-.393-2.005L7.82 3.474l-5.37 5.373c-.603.603-.603 1.582 0 2.186l10.48 10.477c.604.604 1.582.604 2.186 0l10.43-10.43c.605-.605.605-1.582 0-2.186"/></svg>
+                    </div>
+                    <h3 class="skill-name">Git</h3>
+                    <div class="skill-bar"><div class="skill-fill" style="--fill: 78%;"></div></div>
+                </div>
+
+                <!-- Skill Card 8 -->
+                <div class="skill-card" id="skill-sql">
+                    <div class="skill-icon-wrapper" style="--accent: #4479A1;">
+                        <svg viewBox="0 0 24 24" fill="currentColor" width="32" height="32"><path d="M12 3C7.58 3 4 4.79 4 7v10c0 2.21 3.58 4 8 4s8-1.79 8-4V7c0-2.21-3.58-4-8-4zm0 2c3.87 0 6 1.5 6 2s-2.13 2-6 2-6-1.5-6-2 2.13-2 6-2zM6 17v-2.42c1.23.8 3.36 1.42 6 1.42s4.77-.62 6-1.42V17c0 .5-2.13 2-6 2s-6-1.5-6-2zm0-5v-2.42c1.23.8 3.36 1.42 6 1.42s4.77-.62 6-1.42V12c0 .5-2.13 2-6 2s-6-1.5-6-2z"/></svg>
+                    </div>
+                    <h3 class="skill-name">SQL</h3>
+                    <div class="skill-bar"><div class="skill-fill" style="--fill: 74%;"></div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== PROJECTS ===================== -->
+    <section class="section projects" id="projects">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <p class="section-subtitle">Some things I've built recently</p>
+
+            <div class="projects-grid">
+                <!-- Project Card 1 -->
+                <article class="project-card" id="project-1">
+                    <div class="project-image-wrapper">
+                        <img src="assets/project-dashboard.png" alt="Analytics Dashboard — a dark-themed SaaS dashboard with data visualizations" class="project-image" loading="lazy">
+                        <div class="project-overlay">
+                            <a href="#" class="project-link" aria-label="View live demo">🔗 Live</a>
+                            <a href="#" class="project-link" aria-label="View source code">📂 Code</a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Analytics Dashboard</h3>
+                        <p class="project-description">
+                            A real-time analytics dashboard with interactive charts, dark theme, and glassmorphism design. Built with modern front-end tools.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">React</span>
+                            <span class="tag">Chart.js</span>
+                            <span class="tag">CSS3</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project Card 2 -->
+                <article class="project-card" id="project-2">
+                    <div class="project-image-wrapper">
+                        <img src="assets/project-mobile.png" alt="FitTrack — a mobile fitness app with dark UI" class="project-image" loading="lazy">
+                        <div class="project-overlay">
+                            <a href="#" class="project-link" aria-label="View live demo">🔗 Live</a>
+                            <a href="#" class="project-link" aria-label="View source code">📂 Code</a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">FitTrack Mobile App</h3>
+                        <p class="project-description">
+                            A fitness tracking application with activity monitoring, progress circles, and personalized workout plans. Designed mobile-first.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">React Native</span>
+                            <span class="tag">Firebase</span>
+                            <span class="tag">UI/UX</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project Card 3 -->
+                <article class="project-card" id="project-3">
+                    <div class="project-image-wrapper">
+                        <img src="assets/project-ecommerce.png" alt="ShopEase — a clean e-commerce platform" class="project-image" loading="lazy">
+                        <div class="project-overlay">
+                            <a href="#" class="project-link" aria-label="View live demo">🔗 Live</a>
+                            <a href="#" class="project-link" aria-label="View source code">📂 Code</a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">ShopEase E-Commerce</h3>
+                        <p class="project-description">
+                            A full-featured e-commerce platform with product listings, cart functionality, user authentication, and payment integration.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Node.js</span>
+                            <span class="tag">MongoDB</span>
+                            <span class="tag">Stripe</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== EDUCATION ===================== -->
+    <section class="section education" id="education">
+        <div class="container">
+            <h2 class="section-title">Education</h2>
+            <p class="section-subtitle">My academic journey</p>
+
+            <div class="timeline">
+                <!-- Timeline Item 1 -->
+                <div class="timeline-item" id="edu-1">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2023 — Present</span>
+                        <h3 class="timeline-title">B.Tech in Computer Science &amp; Engineering</h3>
+                        <p class="timeline-institution">National Institute of Technology</p>
+                        <p class="timeline-detail">
+                            Specializing in Software Engineering and Data Science. Active member of the coding club
+                            and ACM student chapter. Current CGPA: 8.9/10.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 2 -->
+                <div class="timeline-item" id="edu-2">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2021 — 2023</span>
+                        <h3 class="timeline-title">Higher Secondary (XII) — Science</h3>
+                        <p class="timeline-institution">Delhi Public School</p>
+                        <p class="timeline-detail">
+                            Physics, Chemistry, Mathematics, and Computer Science stream.
+                            Scored 95.4% in CBSE Board Examinations.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 3 -->
+                <div class="timeline-item" id="edu-3">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2019 — 2021</span>
+                        <h3 class="timeline-title">Secondary School (X)</h3>
+                        <p class="timeline-institution">Delhi Public School</p>
+                        <p class="timeline-detail">
+                            All-rounder with distinction in Mathematics and Science.
+                            Scored 96.2% in CBSE Board Examinations.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== CERTIFICATIONS ===================== -->
+    <section class="section certifications" id="certifications">
+        <div class="container">
+            <h2 class="section-title">Certifications</h2>
+            <p class="section-subtitle">Recognized achievements &amp; learning milestones</p>
+
+            <div class="certifications-grid">
+                <!-- Cert Card 1 -->
+                <div class="cert-card" id="cert-1">
+                    <div class="cert-badge">
+                        <svg viewBox="0 0 24 24" fill="currentColor" width="36" height="36"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+                    </div>
+                    <h3 class="cert-title">AWS Cloud Practitioner</h3>
+                    <p class="cert-issuer">Amazon Web Services</p>
+                    <span class="cert-date">Jan 2026</span>
+                </div>
+
+                <!-- Cert Card 2 -->
+                <div class="cert-card" id="cert-2">
+                    <div class="cert-badge">
+                        <svg viewBox="0 0 24 24" fill="currentColor" width="36" height="36"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+                    </div>
+                    <h3 class="cert-title">Google Data Analytics</h3>
+                    <p class="cert-issuer">Google — Coursera</p>
+                    <span class="cert-date">Sep 2025</span>
+                </div>
+
+                <!-- Cert Card 3 -->
+                <div class="cert-card" id="cert-3">
+                    <div class="cert-badge">
+                        <svg viewBox="0 0 24 24" fill="currentColor" width="36" height="36"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+                    </div>
+                    <h3 class="cert-title">Meta Front-End Developer</h3>
+                    <p class="cert-issuer">Meta — Coursera</p>
+                    <span class="cert-date">Jun 2025</span>
+                </div>
+
+                <!-- Cert Card 4 -->
+                <div class="cert-card" id="cert-4">
+                    <div class="cert-badge">
+                        <svg viewBox="0 0 24 24" fill="currentColor" width="36" height="36"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+                    </div>
+                    <h3 class="cert-title">Python for Everybody</h3>
+                    <p class="cert-issuer">University of Michigan</p>
+                    <span class="cert-date">Mar 2025</span>
+                </div>
+
+                <!-- Cert Card 5 -->
+                <div class="cert-card" id="cert-5">
+                    <div class="cert-badge">
+                        <svg viewBox="0 0 24 24" fill="currentColor" width="36" height="36"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+                    </div>
+                    <h3 class="cert-title">HackerRank Problem Solving</h3>
+                    <p class="cert-issuer">HackerRank</p>
+                    <span class="cert-date">Dec 2024</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== CONTACT ===================== -->
+    <section class="section contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">Let's Connect</h2>
+            <p class="section-subtitle">Have a question or want to work together? Reach out!</p>
+
+            <div class="contact-grid">
+                <!-- Contact Form -->
+                <form class="contact-form" action="https://formspree.io/f/your-form-id" method="POST" id="contact-form">
+                    <div class="form-group">
+                        <label for="name" class="form-label">Full Name</label>
+                        <input type="text" id="name" name="name" class="form-input" placeholder="John Doe" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email Address</label>
+                        <input type="email" id="email" name="email" class="form-input" placeholder="john@example.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject" class="form-label">Subject</label>
+                        <input type="text" id="subject" name="subject" class="form-input" placeholder="Project Collaboration">
+                    </div>
+                    <div class="form-group">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea id="message" name="message" class="form-input form-textarea" placeholder="Hi Saksham, I'd love to chat about..." rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn--primary btn--full">Send Message</button>
+                </form>
+
+                <!-- Contact Info Cards -->
+                <div class="contact-info">
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                        </div>
+                        <div>
+                            <h4 class="info-title">Email</h4>
+                            <p class="info-detail">saksham@example.com</p>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg>
+                        </div>
+                        <div>
+                            <h4 class="info-title">Location</h4>
+                            <p class="info-detail">New Delhi, India</p>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M12 .5C5.37.5 0 5.78 0 12.292c0 5.211 3.438 9.63 8.205 11.188.6.111.82-.254.82-.567 0-.28-.01-1.022-.015-2.005-3.338.711-4.042-1.582-4.042-1.582-.546-1.361-1.333-1.723-1.333-1.723-1.089-.731.083-.716.083-.716 1.205.082 1.838 1.215 1.838 1.215 1.07 1.802 2.807 1.281 3.492.979.108-.763.418-1.281.762-1.576-2.665-.297-5.466-1.309-5.466-5.827 0-1.287.465-2.339 1.228-3.163-.122-.298-.532-1.497.117-3.12 0 0 1.001-.314 3.28 1.209A11.504 11.504 0 0 1 12 6.844c1.02.005 2.047.136 3.006.398 2.277-1.523 3.276-1.209 3.276-1.209.65 1.623.24 2.822.118 3.12.765.824 1.226 1.876 1.226 3.163 0 4.53-2.805 5.527-5.475 5.817.43.366.814 1.084.814 2.184 0 1.576-.014 2.846-.014 3.232 0 .316.216.683.825.567C20.565 21.917 24 17.5 24 12.292 24 5.78 18.627.5 12 .5z"/></svg>
+                        </div>
+                        <div>
+                            <h4 class="info-title">GitHub</h4>
+                            <p class="info-detail">github.com/saksham</p>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                        </div>
+                        <div>
+                            <h4 class="info-title">LinkedIn</h4>
+                            <p class="info-detail">linkedin.com/in/saksham</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer class="footer" id="footer">
+        <div class="container footer-content">
+            <div class="footer-top">
+                <!-- Brand -->
+                <div class="footer-brand">
+                    <a href="#hero" class="nav-brand">
+                        <span class="brand-icon">S</span>
+                        <span class="brand-text">aksham</span>
+                    </a>
+                    <p class="footer-tagline">Building the future, one line of code at a time.</p>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="footer-links-group">
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Social -->
+                <div class="footer-links-group">
+                    <h4 class="footer-heading">Social</h4>
+                    <ul class="footer-links">
+                        <li><a href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                        <li><a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                        <li><a href="https://twitter.com/" target="_blank" rel="noopener noreferrer">Twitter / X</a></li>
+                        <li><a href="mailto:saksham@example.com">Email</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <hr class="footer-divider">
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Saksham. Crafted with ❤️ using HTML &amp; CSS.</p>
+                <p class="footer-note">No JavaScript was harmed in the making of this site.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
